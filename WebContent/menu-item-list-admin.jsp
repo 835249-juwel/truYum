@@ -32,19 +32,21 @@
 
             <tr>
                 <td class="name">${menuItem.getName()}</td>
-                <td class="price">${menuItem.getPrice()}</td>
+                <td class="price"><f:formatNumber type="currency" currencySymbol="Rs."
+                        value="${menuItem.getPrice()}"></f:formatNumber></td>
                 <td align="center"><c:choose>
                         <c:when test="${menuItem.isActive()==true }">Yes</c:when>
                         <c:otherwise>No</c:otherwise>
-                    </c:choose>
+                    </c:choose></td>
                 <td align="center"><f:formatDate value="${menuItem.getDateOfLaunch()}"
                         pattern="dd/MM/yyyy" /></td>
                 <td align="center">${menuItem.getCategory()}</td>
                 <td align="center"><c:choose>
                         <c:when test="${menuItem.isFreeDelivery()==true }">Yes</c:when>
                         <c:otherwise>No</c:otherwise>
-                    </c:choose>
+                    </c:choose></td>
                 <td align="center"><a href="ShowEditMenuItem?menuItemId=${menuItem.getId()}">Edit</a></td>
+
             </tr>
         </c:forEach>
     </table>

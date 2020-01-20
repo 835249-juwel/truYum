@@ -47,9 +47,7 @@
         </c:forEach>
 
         <tr>
-            <td></td>
-            <th align="left">Total</th>
-            <th align="right">Rs. ${cart.getTotal()}</th>
+            <th align="left">Total : Rs. ${cart.getTotal()}</th>
         </tr>
     </table>
     <footer>
